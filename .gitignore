@@ -1,0 +1,8 @@
+
+*.obj
+*.tlog
+*.log
+*.db
+*.opendb
+.vs/Dune/v16/.suo
+.vs/Dune/v16/.suo
