@@ -1,4 +1,6 @@
 #include <iostream>
+#include <gl/GL.h>
+#include <gl/GLU.h>
 #include <GLFW/glfw3.h>
 
 
@@ -19,11 +21,14 @@ int main()
     GLFWwindow* window; // (In the accompanying source code, this variable is global for simplicity)
     window = glfwCreateWindow(1200, 800, "Dune example", NULL, NULL);
     if (window == NULL) {
-        fprintf(stderr, "tiny potato\n");
+        fprintf(stderr, "Dune exception\n");
         glfwTerminate();
         return -1;
     }
     glfwMakeContextCurrent(window); // Initialize GLEW
+    GLuint VertexArrayID;
+    glGenVertexArrays(1, &VertexArrayID);
+    glBindVertexArray(VertexArrayID);
     while (!glfwWindowShouldClose(window)) {
 
     }
